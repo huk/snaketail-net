@@ -92,6 +92,8 @@ namespace SnakeTail
             this._editToolBtn = new System.Windows.Forms.Button();
             this._addToolBtn = new System.Windows.Forms.Button();
             this._extToolsListView = new System.Windows.Forms.ListView();
+            this._tabFilter = new System.Windows.Forms.TabPage();
+            this._addFilterBtn = new System.Windows.Forms.Button();
             this._acceptBtn = new System.Windows.Forms.Button();
             this._cancelBtn = new System.Windows.Forms.Button();
             this._applyAllBtn = new System.Windows.Forms.Button();
@@ -117,6 +119,7 @@ namespace SnakeTail
             this._tabPageFile.SuspendLayout();
             this._tabPageKeyWords.SuspendLayout();
             this._tabPageExtTools.SuspendLayout();
+            this._tabFilter.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -245,6 +248,7 @@ namespace SnakeTail
             this._tabControl.Controls.Add(this._tabPageFile);
             this._tabControl.Controls.Add(this._tabPageKeyWords);
             this._tabControl.Controls.Add(this._tabPageExtTools);
+            this._tabControl.Controls.Add(this._tabFilter);
             this._tabControl.Location = new System.Drawing.Point(6, 6);
             this._tabControl.Name = "_tabControl";
             this._tabControl.SelectedIndex = 0;
@@ -609,6 +613,27 @@ namespace SnakeTail
             this._extToolsListView.View = System.Windows.Forms.View.Details;
             this._extToolsListView.DoubleClick += new System.EventHandler(this._editToolBtn_Click);
             // 
+            // _tabFilter
+            // 
+            this._tabFilter.Controls.Add(this._addFilterBtn);
+            this._tabFilter.Location = new System.Drawing.Point(4, 22);
+            this._tabFilter.Name = "_tabFilter";
+            this._tabFilter.Padding = new System.Windows.Forms.Padding(3);
+            this._tabFilter.Size = new System.Drawing.Size(359, 207);
+            this._tabFilter.TabIndex = 4;
+            this._tabFilter.Text = "Keyword Filter";
+            this._tabFilter.UseVisualStyleBackColor = true;
+            // 
+            // _addFilterBtn
+            // 
+            this._addFilterBtn.Location = new System.Drawing.Point(272, 20);
+            this._addFilterBtn.Name = "_addFilterBtn";
+            this._addFilterBtn.Size = new System.Drawing.Size(75, 23);
+            this._addFilterBtn.TabIndex = 11;
+            this._addFilterBtn.Text = "Add...";
+            this._addFilterBtn.UseVisualStyleBackColor = true;
+            this._addFilterBtn.Click += new System.EventHandler(this._addFilterBtn_Click);
+            // 
             // _acceptBtn
             // 
             this._acceptBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -680,6 +705,7 @@ namespace SnakeTail
             this._tabPageFile.PerformLayout();
             this._tabPageKeyWords.ResumeLayout(false);
             this._tabPageExtTools.ResumeLayout(false);
+            this._tabFilter.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -723,8 +749,7 @@ namespace SnakeTail
         private System.Windows.Forms.Button _bookmarkTextColorBtn;
         private System.Windows.Forms.Button _bookmarkBackColorBtn;
         private System.Windows.Forms.Button _saveDefaultBtn;
-
-
-
+        private System.Windows.Forms.TabPage _tabFilter;
+        private System.Windows.Forms.Button _addFilterBtn;
     }
 }

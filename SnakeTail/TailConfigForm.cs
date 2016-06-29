@@ -366,5 +366,11 @@ namespace SnakeTail
             tailConfig.TailFiles.Add(TailFileConfig);
             MainForm.Instance.SaveConfig(tailConfig, string.Empty);
         }
+
+        private void _addFilterBtn_Click(object sender, EventArgs e)
+        {
+            FilterConfigForm dlg = new FilterConfigForm();
+            dlg.ShowDialog(this);
+        }
     }
 }

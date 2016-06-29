@@ -85,6 +85,12 @@
     <Compile Include="ExternalToolConfigForm.Designer.cs">
       <DependentUpon>ExternalToolConfigForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FilterConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterConfigForm.Designer.cs">
+      <DependentUpon>FilterConfigForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListViewUtil.cs" />
     <Compile Include="MiniDumper.cs" />
     <Compile Include="MruStripMenu.cs" />
